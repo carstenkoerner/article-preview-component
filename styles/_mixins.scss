@@ -1,0 +1,35 @@
+@mixin h2-mobile() {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: $clr-very-dark-grayish-blue;
+}
+
+@mixin h2-desktop() {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  color: $clr-very-dark-grayish-blue;
+}
+
+@mixin paragraf() {
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  color: $clr-desaturated-dark-blue;
+}
+
+@mixin author-name-mobile() {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  color: $clr-very-dark-grayish-blue;
+}

@@ -1,0 +1,215 @@
+@import "./typography";
+@import "./resets";
+@import "./variables";
+@import "./mixins";
+
+
+body {
+  background-color: $clr-light-grayish-blue;
+  @include paragraf;
+  font-size: $fs-body;
+  min-height: 99svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: $clr-white;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  margin: 2rem;
+  width: 90vw;
+  max-width: 500px;
+
+  &__img {
+    grid-row: 1;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-image: url("../assets/images/drawers.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: calc(50vw);
+    max-height: 280px;
+  }
+
+  &__2nd-panel {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &__heading {
+      @include  h2-mobile;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    &__description {
+      @include paragraf;
+    }
+
+    &__author__container {
+      margin-top: 1.6rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: 1fr;
+      align-content: center;
+      justify-items: stretch;
+      margin-bottom: 2rem;
+    
+      &__avatar-img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+      }
+
+      &__name-date {
+        margin-left: 1rem;
+        justify-self: start;
+        align-self: center;
+      }
+    
+      &__name {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        @include author-name-mobile;
+      }
+    
+      &__date {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      
+      &__circle {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        background-color: $clr-light-grayish-blue;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        align-self: center;
+        display: block;
+        justify-self: end;
+      }
+
+      &__share-img {
+        position: relative;
+        top: 8px;
+        left: 8px;
+      }
+      
+    }
+    
+  } 
+}
+
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: $clr-blue; 
+}
+
+
+
+
+@media screen and (min-width: 750px) {
+  
+  .card {
+    display: grid;
+    grid-template-columns: 285px 445px;
+    grid-template-rows: 1fr;
+    width: 730px;
+    max-width: 730px;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__img {
+      grid-column: 1 / 2;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      border-top-right-radius: 0;
+      background-image: url("../assets/images/drawers.jpg");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      height: 280px;
+      width: 285px;
+    }
+    &__2nd-panel {
+      grid-column: 2/3;
+      width: 445px;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: $clr-white;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+  
+      &__heading {
+        @include  h2-desktop;
+        margin: 2rem 2rem 0.7rem 0;
+      }
+  
+      
+      &__author__container {
+        margin-top: 1.2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr;
+        align-content: center;
+        justify-items: stretch;
+        margin-bottom: 0;
+      
+        &__avatar-img {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+        }
+  
+        &__name-date {
+          margin-left: 1rem;
+          justify-self: start;
+          align-self: center;
+        }
+      
+        &__name {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          @include author-name-mobile;
+        }
+      
+        &__date {
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        
+        &__share-img {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          align-self: center;
+          display: block;
+          justify-self: end;
+        }
+        
+      }
+      
+    } 
+
+    
+  }
+}
+
