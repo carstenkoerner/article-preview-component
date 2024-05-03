@@ -26,8 +26,13 @@
         <p class="card__2nd-panel__author__container__name">Michelle Appleton</p>
         <p class="card__2nd-panel__author__container__date">28 Jun 2020</p>
       </div>
-      <div class="card__2nd-panel__author__container__circle">
+      <div class="card__2nd-panel__author__container__circle" onclick="toggleTextField()">
         <img src="./assets/images/icon-share.svg" alt="" class="card__2nd-panel__author__container__share-img">
+        <div id="link-field" link-field-text="SHARE"> 
+          <a href="https://www.facebook.com" target="_blank"><img src="./assets/images/icon-facebook.svg" alt="facebook" id="link-field__facebook" /></a>
+          <a href="https://twitter.com/" target="_blank"><img src="./assets/images/icon-twitter.svg" alt="facebook" id="link-field__twitter" /></a>
+          <a href="https://www.pinterest.de" target="_blank"><img src="./assets/images/icon-pinterest.svg" alt="facebook" id="link-field__pinterest" /></a>
+        </div>
       </div>
     </div>
   </div>
@@ -37,4 +42,5 @@
   Coded by <a href="#">Carsten Körner</a>.
 </footer>
 </body>
+<script src="./scripts/main.js"></script>
 </html>

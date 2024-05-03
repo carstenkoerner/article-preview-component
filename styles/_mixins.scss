@@ -25,6 +25,15 @@
   color: $clr-desaturated-dark-blue;
 }
 
+@mixin share() {
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  color: $clr-grayish-blue;
+}
+
 @mixin author-name-mobile() {
   font-family: "Manrope";
   font-weight: 700;
